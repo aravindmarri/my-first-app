@@ -1,0 +1,17 @@
+<p>First Assignment</p>
+<button mat-raised-button color="primary" (click)="say()" [disabled]="canClick">Don't Click me</button>
+<hr>
+<p>Second Assignment</p>
+<p>User Name</p>
+<input type="text" [(ngModel)]="userName">
+<p>{{userName}}</p>
+<br>
+<button mat-raised-button class="btn-reset"[disabled]="userName === '' " (click)="userName=''"> Reset </button>
+<hr>
+<p>Third Assigment</p>
+<button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+<p *ngIf="showSecret">Secret Password = avi</p>
+<div *ngFor="let logItem of log"
+  [ngStyle]="{backgroundColor: logItem >=5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': logItem >=5}"
+>{{ logItem }}</div>
